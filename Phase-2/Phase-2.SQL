@@ -18,15 +18,15 @@ CREATE TABLE factory (
 );
 
 CREATE TABLE orders(
-	order_ID INT PRIMARY KEY,
+	order_ID VARCHAR(50) PRIMARY KEY,
 	product_ID INT,
 	brand VARCHAR(100),
 	distributer VARCHAR(100),
-	customer_ID INT
+	customer_ID VARCHAR(50)
 );
 
 CREATE TABLE customer(
-	national_ID INT PRIMARY KEY,
+	national_ID VARCHAR(50) PRIMARY KEY,
 	cname VARCHAR(100),
 	last_name VARCHAR(100),
 	provience VARCHAR(100),
@@ -34,12 +34,12 @@ CREATE TABLE customer(
 	street VARCHAR(100),
 	alley VARCHAR(100),
 	pelak INT,
-	phone_number INT,
-	orders INT
+	phone_number VARCHAR(50),
+	orders VARCHAR(50)
 );
 
 CREATE TABLE distributer(
-	username VARCHAR(100) UNIQUE,
+	username VARCHAR(100),
 	product_ID INT,
 	brand VARCHAR(100),
 	price FLOAT,
