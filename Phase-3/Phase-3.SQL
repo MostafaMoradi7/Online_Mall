@@ -191,3 +191,148 @@ VALUES
     (15, 15, 'Brand15', 'Distributer7', 15),
     (16, 16, 'Brand1', 'Distributer1', 16),
     (17, 17, 'Brand2', 'Distributer2', 17);
+
+-- Inserting fake data into the ptype table
+INSERT INTO ptype (tname) VALUES ('Cake'), ('Biscuit'), ('Chocolate'), ('Snack'), ('Drink');
+
+-- Inserting fake data into the brand table
+INSERT INTO brand (bname, factory_ID, btype) VALUES
+    ('BrandA', 1, 'Cake'),
+    ('BrandB', 2, 'Biscuit'),
+    ('BrandC', 3, 'Chocolate'),
+    ('BrandD', 1, 'Snack'),
+    ('BrandE', 4, 'Drink');
+
+-- Inserting fake data into the brand_info table
+INSERT INTO brand_info (bname, opening_day, opening_month, opening_year) VALUES
+    ('BrandA', 1, 1, 2010),
+    ('BrandB', 15, 6, 2005),
+    ('BrandC', 10, 3, 2018),
+    ('BrandD', 5, 9, 2008),
+    ('BrandE', 20, 7, 2013);
+
+-- Inserting fake data into the product table
+INSERT INTO product (barcode_ID, pname, weight, quantity, brand, ptype) VALUES
+    (41, 'Cake A', 0.5, 100, 'BrandA', 'Cake'),
+    (42, 'Cake B', 0.6, 80, 'BrandA', 'Cake'),
+    (43, 'Biscuit X', 0.2, 200, 'BrandB', 'Biscuit'),
+    (44, 'Biscuit Y', 0.3, 150, 'BrandB', 'Biscuit'),
+    (45, 'Chocolate P', 0.1, 50, 'BrandC', 'Chocolate'),
+    (46, 'Chocolate Q', 0.2, 70, 'BrandC', 'Chocolate'),
+    (47, 'Snack M', 0.4, 120, 'BrandD', 'Snack'),
+    (48, 'Snack N', 0.3, 90, 'BrandD', 'Snack'),
+    (49, 'Drink X', 1.0, 60, 'BrandE', 'Drink'),
+    (50, 'Drink Y', 0.5, 80, 'BrandE', 'Drink');
+
+-- Inserting fake data into the factory table
+INSERT INTO factory (license, product, brand, fname, opening_day, opening_month, opening_year) VALUES
+    (16, 41, 'BrandA', 'Factory1', 1, 1, 2000),
+    (17, 42, 'BrandA', 'Factory2', 15, 6, 1998),
+    (18, 43, 'BrandB', 'Factory3', 10, 3, 2015),
+    (19, 44, 'BrandB', 'Factory4', 5, 9, 2006),
+    (20, 45, 'BrandC', 'Factory5', 3, 12, 2012),
+    (21, 46, 'BrandC', 'Factory6', 20, 4, 2019),
+    (22, 47, 'BrandD', 'Factory7', 7, 7, 2004),
+    (23, 48, 'BrandD', 'Factory8', 11, 11, 2011),
+    (24, 49, 'BrandE', 'Factory9', 25, 2, 2009),
+    (25, 50, 'BrandE', 'Factory10', 14, 9, 2016);
+-- Inserting fake data into the customer table
+INSERT INTO customer (national_ID, cname, last_name, provience, city, street, alley, pelak, phone_number) VALUES
+    ('CUST001', 'John', 'Doe', 'Province1', 'City1', 'Street1', 'Alley1', 10, '1234567890'),
+    ('CUST002', 'Jane', 'Smith', 'Province2', 'City2', 'Street2', 'Alley2', 20, '9876543210'),
+    ('CUST003', 'David', 'Johnson', 'Province1', 'City1', 'Street3', 'Alley3', 30, '4561237890'),
+    ('CUST004', 'Emily', 'Davis', 'Province3', 'City3', 'Street4', 'Alley4', 40, '7894561230'),
+    ('CUST005', 'Michael', 'Wilson', 'Province2', 'City2', 'Street5', 'Alley5', 50, '3216549870'),
+    ('CUST006', 'Sarah', 'Brown', 'Province3', 'City3', 'Street6', 'Alley6', 60, '6549873210'),
+    ('CUST007', 'Robert', 'Taylor', 'Province4', 'City4', 'Street7', 'Alley7', 70, '9081726354'),
+    ('CUST008', 'Laura', 'Miller', 'Province2', 'City2', 'Street8', 'Alley8', 80, '2635418709'),
+    ('CUST009', 'Daniel', 'Wilson', 'Province5', 'City5', 'Street9', 'Alley9', 90, '4958673021'),
+    ('CUST010', 'Olivia', 'Clark', 'Province1', 'City1', 'Street10', 'Alley10', 100, '7290183654');
+
+-- Inserting fake data into the distributer_info table
+INSERT INTO distributer_info (username, email, provience, city, street, alley, pelak, work_time_start, work_time_end) VALUES
+    ('user1', 'user1@example.com', 'Province1', 'City1', 'Street1', 'Alley1', 10, '09:00', '18:00'),
+    ('user2', 'user2@example.com', 'Province2', 'City2', 'Street2', 'Alley2', 20, '08:00', '17:00'),
+    ('user3', 'user3@example.com', 'Province3', 'City3', 'Street3', 'Alley3', 30, '07:00', '16:00'),
+    ('user4', 'user4@example.com', 'Province4', 'City4', 'Street4', 'Alley4', 40, '06:00', '15:00'),
+    ('user5', 'user5@example.com', 'Province5', 'City5', 'Street5', 'Alley5', 50, '10:00', '19:00'),
+    ('user6', 'user6@example.com', 'Province1', 'City1', 'Street6', 'Alley6', 60, '09:00', '18:00'),
+    ('user7', 'user7@example.com', 'Province2', 'City2', 'Street7', 'Alley7', 70, '08:00', '17:00'),
+    ('user8', 'user8@example.com', 'Province3', 'City3', 'Street8', 'Alley8', 80, '07:00', '16:00'),
+    ('user9', 'user9@example.com', 'Province4', 'City4', 'Street9', 'Alley9', 90, '06:00', '15:00'),
+    ('user10', 'user10@example.com', 'Province5', 'City5', 'Street10', 'Alley10', 100, '10:00', '19:00');
+
+-- Inserting fake data into the distributer table
+INSERT INTO distributer (username, product_ID, brand, price) VALUES
+    ('user1', 41, 'BrandA', 10.99),
+    ('user1', 43, 'BrandB', 5.99),
+    ('user2', 42, 'BrandA', 9.99),
+    ('user2', 45, 'BrandC', 7.99),
+    ('user3', 44, 'BrandB', 4.99),
+    ('user3', 47, 'BrandD', 8.99),
+    ('user4', 46, 'BrandC', 6.99),
+    ('user4', 48, 'BrandD', 9.99),
+    ('user5', 41, 'BrandA', 10.49),
+    ('user5', 43, 'BrandB', 5.49),
+    ('user6', 42, 'BrandA', 9.49),
+    ('user6', 45, 'BrandC', 7.49),
+    ('user7', 44, 'BrandB', 4.49),
+    ('user7', 47, 'BrandD', 8.49),
+    ('user8', 46, 'BrandC', 6.49),
+    ('user8', 48, 'BrandD', 9.49),
+    ('user9', 41, 'BrandA', 10.99),
+    ('user9', 43, 'BrandB', 5.99),
+    ('user10', 42, 'BrandA', 9.99),
+    ('user10', 45, 'BrandC', 7.99);
+
+-- Inserting fake data into the orders table
+INSERT INTO orders (order_ID, product_ID, brand, distributer, customer_ID) VALUES
+    ('ORDER001', 41, 'BrandA', 'user1', 'CUST001'),
+    ('ORDER002', 43, 'BrandB', 'user2', 'CUST002'),
+    ('ORDER003', 42, 'BrandA', 'user1', 'CUST003'),
+    ('ORDER004', 45, 'BrandC', 'user2', 'CUST004'),
+    ('ORDER005', 44, 'BrandB', 'user3', 'CUST005'),
+    ('ORDER006', 46, 'BrandC', 'user4', 'CUST006'),
+    ('ORDER007', 48, 'BrandD', 'user5', 'CUST007'),
+    ('ORDER008', 41, 'BrandA', 'user6', 'CUST008'),
+    ('ORDER009', 43, 'BrandB', 'user7', 'CUST009'),
+    ('ORDER010', 42, 'BrandA', 'user8', 'CUST010');
+
+-- Inserting more fake data into the orders table
+INSERT INTO orders (order_ID, product_ID, brand, distributer, customer_ID) VALUES
+    ('ORDER011', 44, 'BrandB', 'user9', 'CUST001'),
+    ('ORDER012', 47, 'BrandD', 'user10', 'CUST002'),
+    ('ORDER013', 46, 'BrandC', 'user1', 'CUST003'),
+    ('ORDER014', 48, 'BrandD', 'user2', 'CUST004'),
+    ('ORDER015', 41, 'BrandA', 'user3', 'CUST005'),
+    ('ORDER016', 43, 'BrandB', 'user4', 'CUST006'),
+    ('ORDER017', 42, 'BrandA', 'user5', 'CUST007'),
+    ('ORDER018', 45, 'BrandC', 'user6', 'CUST008'),
+    ('ORDER019', 44, 'BrandB', 'user7', 'CUST009'),
+    ('ORDER020', 47, 'BrandD', 'user8', 'CUST010');
+
+-- Inserting more fake data into the orders table
+INSERT INTO orders (order_ID, product_ID, brand, distributer, customer_ID) VALUES
+    ('ORDER021', 46, 'BrandC', 'user9', 'CUST001'),
+    ('ORDER022', 48, 'BrandD', 'user10', 'CUST002'),
+    ('ORDER023', 41, 'BrandA', 'user1', 'CUST003'),
+    ('ORDER024', 43, 'BrandB', 'user2', 'CUST004'),
+    ('ORDER025', 42, 'BrandA', 'user3', 'CUST005'),
+    ('ORDER026', 45, 'BrandC', 'user4', 'CUST006'),
+    ('ORDER027', 44, 'BrandB', 'user5', 'CUST007'),
+    ('ORDER028', 47, 'BrandD', 'user6', 'CUST008'),
+    ('ORDER029', 46, 'BrandC', 'user7', 'CUST009'),
+    ('ORDER030', 48, 'BrandD', 'user8', 'CUST010');
+
+-- Inserting more fake data into the orders table
+INSERT INTO orders (order_ID, product_ID, brand, distributer, customer_ID) VALUES
+    ('ORDER031', 41, 'BrandA', 'user9', 'CUST001'),
+    ('ORDER032', 43, 'BrandB', 'user10', 'CUST002'),
+    ('ORDER033', 42, 'BrandA', 'user1', 'CUST003'),
+    ('ORDER034', 45, 'BrandC', 'user2', 'CUST004'),
+    ('ORDER035', 44, 'BrandB', 'user3', 'CUST005'),
+    ('ORDER036', 47, 'BrandD', 'user4', 'CUST006'),
+    ('ORDER037', 46, 'BrandC', 'user5', 'CUST007'),
+    ('ORDER038', 48, 'BrandD', 'user6', 'CUST008'),
+    ('ORDER039', 41, 'BrandA', 'user7', 'CUST009'),
+    ('ORDER040', 43, 'BrandB', 'user8', 'CUST010');

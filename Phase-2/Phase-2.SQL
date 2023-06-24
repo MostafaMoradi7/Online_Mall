@@ -18,11 +18,11 @@ CREATE TABLE factory (
 );
 
 CREATE TABLE orders(
-	order_ID VARCHAR(50) PRIMARY KEY,
+	customer_ID VARCHAR(50) PRIMARY KEY,
 	product_ID INT,
 	brand VARCHAR(100),
 	distributer VARCHAR(100),
-	customer_ID VARCHAR(50)
+	order_ID VARCHAR(50)
 );
 
 CREATE TABLE customer(
@@ -35,7 +35,6 @@ CREATE TABLE customer(
 	alley VARCHAR(100),
 	pelak INT,
 	phone_number VARCHAR(50),
-	orders VARCHAR(50)
 );
 
 CREATE TABLE distributer(
@@ -88,9 +87,7 @@ ALTER TABLE orders
 	ADD CONSTRAINT fk_distributer_username FOREIGN KEY (distributer) REFERENCES distributer (username),
 	ADD CONSTRAINT fk_customer_national FOREIGN KEY (customer_ID) REFERENCES customer (username);
 	
-ALTER TABLE customer 
-	ADD CONSTRAINT fk_orders_orderid FOREIGN KEY (orders) REFERENCES orders (order_ID);
-	
+
 ALTER TABLE distributer
 	ADD CONSTRAINT fk_pid_barcode FOREIGN KEY (product_ID) REFERENCES product (barcode_ID),
 	ADD CONSTRAINT fk_dbrand_bname FOREIGN KEY (brand) REFERENCES brand (bname);
