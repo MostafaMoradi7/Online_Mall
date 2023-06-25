@@ -84,7 +84,6 @@ ALTER TABLE product
 
 ALTER TABLE factory
 	ADD CONSTRAINT fk_product_barcode FOREIGN KEY (product) REFERENCES product (barcode_ID),
-	ADD CONSTRAINT fk_fbrand_bname FOREIGN KEY (brand) REFERENCES brand (bname);
 	
 
 ALTER TABLE distributer
