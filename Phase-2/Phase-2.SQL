@@ -28,8 +28,7 @@ CREATE TABLE order_details (
     product_ID INT,
     brand VARCHAR(100),
     distributer VARCHAR(100),
-    PRIMARY KEY (order_ID, product_ID, brand),
-    CONSTRAINT fk_order_details_orders FOREIGN KEY (order_ID) REFERENCES orders (order_ID)
+    PRIMARY KEY (order_ID, product_ID, brand)
 );
 
 CREATE TABLE customer(
@@ -70,7 +69,6 @@ CREATE TABLE ptype(
 
 CREATE TABLE brand(
 	bname VARCHAR(100) PRIMARY KEY,
-	factory_ID INT,
 	btype VARCHAR(100)
 );
 
@@ -98,11 +96,10 @@ ALTER TABLE distributer
 	
 ALTER TABLE brand
 	ADD CONSTRAINT fk_bname_bname FOREIGN KEY (bname) REFERENCES brand_info (bname),
-	ADD CONSTRAINT fk_btype_tname FOREIGN KEY (btype) REFERENCES ptype (tname),
-	ADD CONSTRAINT fk_factory_license FOREIGN KEY (factory_ID) REFERENCES factory (license);
+	ADD CONSTRAINT fk_btype_tname FOREIGN KEY (btype) REFERENCES ptype (tname);
 	
-	
-	
-	
+ALTER TABLE order_details
+    ADD CONSTRAINT fk_orderdetails_orders FOREIGN KEY (order_ID) REFERENCES orders (order_ID);
+
 	
 	
