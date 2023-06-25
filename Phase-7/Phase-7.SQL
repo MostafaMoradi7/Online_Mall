@@ -7,6 +7,7 @@ UPDATE product
 		SELECT distinct od.product_ID
 		FROM order_details AS od
 	);
+
 	
 -- TRANSACTION
 BEGIN;
@@ -20,5 +21,10 @@ VALUES ('ORDER01021', 2, 'BrandG', 'user6');
 UPDATE product 
     SET quantity = quantity - 1, is_sold = true
     WHERE pname = 'ProductG' AND brand = 'BrandG';
+
+UPDATE distributer
+	SET amount_remaining = amount_remaining - 1
+	WHERE product_ID = 2 AND brand = 'BrandG';
+
 
 COMMIT;

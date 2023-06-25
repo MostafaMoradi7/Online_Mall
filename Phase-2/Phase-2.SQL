@@ -48,6 +48,7 @@ CREATE TABLE distributer(
 	product_ID INT,
 	brand VARCHAR(100),
 	price FLOAT,
+	amount_remaining INT,
 	PRIMARY KEY (username, brand, product_ID)
 );
 
