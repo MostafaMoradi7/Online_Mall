@@ -17,12 +17,19 @@ CREATE TABLE factory (
 	opening_year INT
 );
 
-CREATE TABLE orders(
-	customer_ID VARCHAR(50) PRIMARY KEY,
-	product_ID INT,
-	brand VARCHAR(100),
-	distributer VARCHAR(100),
-	order_ID VARCHAR(50)
+CREATE TABLE orders (
+    order_ID VARCHAR(50) PRIMARY KEY,
+    customer_ID VARCHAR(50),
+    CONSTRAINT fk_orders_customer FOREIGN KEY (customer_ID) REFERENCES customer (national_ID)
+);
+
+CREATE TABLE order_details (
+    order_ID VARCHAR(50),
+    product_ID INT,
+    brand VARCHAR(100),
+    distributer VARCHAR(100),
+    PRIMARY KEY (order_ID, product_ID, brand),
+    CONSTRAINT fk_order_details_orders FOREIGN KEY (order_ID) REFERENCES orders (order_ID)
 );
 
 CREATE TABLE customer(
@@ -80,12 +87,6 @@ ALTER TABLE product
 ALTER TABLE factory
 	ADD CONSTRAINT fk_product_barcode FOREIGN KEY (product) REFERENCES product (barcode_ID),
 	ADD CONSTRAINT fk_fbrand_bname FOREIGN KEY (brand) REFERENCES brand (bname);
-	
-ALTER TABLE orders
-	ADD CONSTRAINT fk_pid_barcode FOREIGN KEY (product_ID) REFERENCES product (barcode_ID),
-	ADD CONSTRAINT fk_obrand_bname FOREIGN KEY (brand) REFERENCES brand (bname),
-	ADD CONSTRAINT fk_distributer_username FOREIGN KEY (distributer) REFERENCES distributer (username),
-	ADD CONSTRAINT fk_customer_national FOREIGN KEY (customer_ID) REFERENCES customer (username);
 	
 
 ALTER TABLE distributer

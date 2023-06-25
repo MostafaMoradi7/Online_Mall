@@ -1,338 +1,720 @@
--- Insert data into ptype table
+-- Inserting fake data into the ptype table
 INSERT INTO ptype (tname)
 VALUES
-    ('Type1'),
-    ('Type2'),
-    ('Type3'),
-    ('Type4'),
-    ('Type5'),
-    ('Type6'),
-    ('Type7'),
-    ('Type8'),
-    ('Type9'),
-    ('Type10'),
-    ('Type11'),
-    ('Type12'),
-    ('Type13'),
-    ('Type14'),
-    ('Type15');
+    ('TypeA'),
+    ('TypeB'),
+    ('TypeC'),
+    ('TypeD'),
+    ('TypeE'),
+    ('TypeF'),
+    ('TypeG'),
+    ('TypeH'),
+    ('TypeI'),
+    ('TypeJ');
 
--- Insert data into brand_info table
-INSERT INTO brand_info (bname, opening_day, opening_month, opening_year)
-VALUES
-    ('Brand1', 1, 1, 2010),
-    ('Brand2', 2, 2, 2011),
-    ('Brand3', 3, 3, 2012),
-    ('Brand4', 4, 4, 2013),
-    ('Brand5', 5, 5, 2014),
-    ('Brand6', 6, 6, 2015),
-    ('Brand7', 7, 7, 2016),
-    ('Brand8', 8, 8, 2017),
-    ('Brand9', 9, 9, 2018),
-    ('Brand10', 10, 10, 2019),
-    ('Brand11', 11, 11, 2020),
-    ('Brand12', 12, 12, 2021),
-    ('Brand13', 13, 1, 2022),
-    ('Brand14', 14, 2, 2023),
-    ('Brand15', 15, 3, 2023);
-
--- Insert data into brand table
-INSERT INTO brand (bname, factory_ID, btype)
-VALUES
-    ('Brand1', 1, 'Type1'),
-    ('Brand2', 2, 'Type2'),
-    ('Brand3', 3, 'Type3'),
-    ('Brand4', 4, 'Type4'),
-    ('Brand5', 5, 'Type5'),
-    ('Brand6', 6, 'Type6'),
-    ('Brand7', 7, 'Type7'),
-    ('Brand8', 8, 'Type8'),
-    ('Brand9', 9, 'Type9'),
-    ('Brand10', 10, 'Type10'),
-    ('Brand11', 11, 'Type11'),
-    ('Brand12', 12, 'Type12'),
-    ('Brand13', 13, 'Type13'),
-    ('Brand14', 14, 'Type14'),
-    ('Brand15', 15, 'Type15');
-
--- Insert data into factory table
-INSERT INTO factory (license, product, brand, fname, opening_day, opening_month, opening_year)
-VALUES
-    (1, 1, 'Brand1', 'Factory1', 1, 1, 2010),
-    (2, 2, 'Brand2', 'Factory2', 2, 2, 2011),
-    (3, 3, 'Brand3', 'Factory3', 3, 3, 2012),
-    (4, 4, 'Brand4', 'Factory4', 4, 4, 2013),
-    (5, 5, 'Brand5', 'Factory5', 5, 5, 2014),
-    (6, 6, 'Brand6', 'Factory6', 6, 6, 2015),
-    (7, 7, 'Brand7', 'Factory7', 7, 7, 2016),
-    (8, 8, 'Brand8', 'Factory8', 8, 8, 2017),
-    (9, 9, 'Brand9', 'Factory9', 9, 9, 2018),
-    (10, 10, 'Brand10', 'Factory10', 10, 10, 2019),
-    (11, 11, 'Brand11', 'Factory11', 11, 11, 2020),
-    (12, 12, 'Brand12', 'Factory12', 12, 12, 2021),
-    (13, 13, 'Brand13', 'Factory13', 13, 1, 2022),
-    (14, 14, 'Brand14', 'Factory14', 14, 2, 2023),
-    (15, 15, 'Brand15', 'Factory15', 15, 3, 2023);
-
--- Insert data into product table
-INSERT INTO product (barcode_ID, pname, weight, quantity, brand, ptype)
-VALUES
-    (1, 'Product1', 0.5, 10, 'Brand1', 'Type1'),
-    (2, 'Product2', 1.2, 15, 'Brand2', 'Type2'),
-    (3, 'Product3', 0.8, 20, 'Brand3', 'Type3'),
-    (4, 'Product4', 1.5, 12, 'Brand4', 'Type4'),
-    (5, 'Product5', 0.7, 18, 'Brand5', 'Type5'),
-    (6, 'Product6', 1.0, 25, 'Brand6', 'Type6'),
-    (7, 'Product7', 0.9, 14, 'Brand7', 'Type7'),
-    (8, 'Product8', 1.3, 30, 'Brand8', 'Type8'),
-    (9, 'Product9', 0.6, 16, 'Brand9', 'Type9'),
-    (10, 'Product10', 1.8, 22, 'Brand10', 'Type10'),
-    (11, 'Product11', 1.1, 9, 'Brand11', 'Type11'),
-    (12, 'Product12', 0.4, 28, 'Brand12', 'Type12'),
-    (13, 'Product13', 1.4, 11, 'Brand13', 'Type13'),
-    (14, 'Product14', 0.3, 35, 'Brand14', 'Type14'),
-    (15, 'Product15', 1.7, 17, 'Brand15', 'Type15'),
-    (16, 'Product16', 0.8, 10, 'Brand1', 'Type1'),
-    (17, 'Product17', 1.2, 15, 'Brand2', 'Type2'),
-    (18, 'Product18', 0.6, 20, 'Brand3', 'Type3'),
-    (19, 'Product19', 1.4, 12, 'Brand4', 'Type4'),
-    (20, 'Product20', 0.7, 18, 'Brand5', 'Type5'),
-    (21, 'Product21', 1.0, 25, 'Brand6', 'Type6'),
-    (22, 'Product22', 0.9, 14, 'Brand7', 'Type7'),
-    (23, 'Product23', 1.3, 30, 'Brand8', 'Type8'),
-    (24, 'Product24', 0.5, 16, 'Brand9', 'Type9'),
-    (25, 'Product25', 1.8, 22, 'Brand10', 'Type10'),
-    (26, 'Product26', 1.1, 9, 'Brand11', 'Type11'),
-    (27, 'Product27', 0.4, 28, 'Brand12', 'Type12'),
-    (28, 'Product28', 1.4, 11, 'Brand13', 'Type13'),
-    (29, 'Product29', 0.3, 35, 'Brand14', 'Type14'),
-    (30, 'Product30', 1.7, 17, 'Brand15', 'Type15'),
-    (31, 'Product31', 0.5, 10, 'Brand1', 'Type1'),
-    (32, 'Product32', 1.2, 15, 'Brand2', 'Type2'),
-    (33, 'Product33', 0.8, 20, 'Brand3', 'Type3'),
-    (34, 'Product34', 1.5, 12, 'Brand4', 'Type4'),
-    (35, 'Product35', 0.7, 18, 'Brand5', 'Type5'),
-    (36, 'Product36', 1.0, 25, 'Brand6', 'Type6'),
-    (37, 'Product37', 0.9, 14, 'Brand7', 'Type7'),
-    (38, 'Product38', 1.3, 30, 'Brand8', 'Type8'),
-    (39, 'Product39', 0.6, 16, 'Brand9', 'Type9'),
-    (40, 'Product40', 1.8, 22, 'Brand10', 'Type10');
-
--- Insert data into distributer_info table
-INSERT INTO distributer_info (username, email, provience, city, street, alley, pelak, work_time_start, work_time_end)
-VALUES
-    ('Distributer1', 'distributer1@example.com', 'Provience1', 'City1', 'Street1', 'Alley1', 1, '09:00', '18:00'),
-    ('Distributer2', 'distributer2@example.com', 'Provience2', 'City2', 'Street2', 'Alley2', 2, '08:00', '17:00'),
-    ('Distributer3', 'distributer3@example.com', 'Provience3', 'City3', 'Street3', 'Alley3', 3, '10:00', '19:00'),
-    ('Distributer4', 'distributer4@example.com', 'Provience4', 'City4', 'Street4', 'Alley4', 4, '09:30', '18:30'),
-    ('Distributer5', 'distributer5@example.com', 'Provience5', 'City5', 'Street5', 'Alley5', 5, '08:30', '17:30'),
-    ('Distributer6', 'distributer6@example.com', 'Provience6', 'City6', 'Street6', 'Alley6', 6, '10:30', '19:30'),
-    ('Distributer7', 'distributer7@example.com', 'Provience7', 'City7', 'Street7', 'Alley7', 7, '09:15', '18:15'),
-    ('Distributer8', 'distributer8@example.com', 'Provience8', 'City8', 'Street8', 'Alley8', 8, '08:15', '17:15');
-
--- Insert data into distributer table
-INSERT INTO distributer (username, product_ID, brand, price)
-VALUES
-    ('Distributer1', 1, 'Brand1', 10.99),
-    ('Distributer2', 2, 'Brand2', 15.99),
-    ('Distributer3', 3, 'Brand3', 20.99),
-    ('Distributer4', 4, 'Brand4', 12.99),
-    ('Distributer5', 5, 'Brand5', 18.99),
-    ('Distributer6', 6, 'Brand6', 25.99),
-    ('Distributer7', 7, 'Brand7', 14.99),
-    ('Distributer8', 8, 'Brand8', 30.99),
-    ('Distributer1', 9, 'Brand9', 16.99),
-    ('Distributer2', 10, 'Brand10', 22.99),
-    ('Distributer3', 11, 'Brand11', 9.99),
-    ('Distributer4', 12, 'Brand12', 28.99),
-    ('Distributer5', 13, 'Brand13', 11.99),
-    ('Distributer6', 14, 'Brand14', 35.99),
-    ('Distributer7', 15, 'Brand15', 17.99);
-
-INSERT INTO customer (national_ID, cname, last_name, provience, city, street, alley, pelak, phone_number, orders)
-VALUES
-    (1, 'Customer1', 'Last1', 'Provience1', 'City1', 'Street1', 'Alley1', 1, 123456789, 1),
-    (2, 'Customer2', 'Last2', 'Provience2', 'City2', 'Street2', 'Alley2', 2, 987654321, 2),
-    (3, 'Customer3', 'Last3', 'Provience3', 'City3', 'Street3', 'Alley3', 3, 456789123, 3),
-    (4, 'Customer4', 'Last4', 'Provience4', 'City4', 'Street4', 'Alley4', 4, 321654987, 4),
-    (5, 'Customer5', 'Last5', 'Provience5', 'City5', 'Street5', 'Alley5', 5, 789123456, 5),
-    (6, 'Customer6', 'Last6', 'Provience6', 'City6', 'Street6', 'Alley6', 6, 654987321, 6),
-    (7, 'Customer7', 'Last7', 'Provience7', 'City7', 'Street7', 'Alley7', 7, 234567891, 7),
-    (8, 'Customer8', 'Last8', 'Provience8', 'City8', 'Street8', 'Alley8', 8, 876543219, 8),
-    (9, 'Customer9', 'Last9', 'Provience9', 'City9', 'Street9', 'Alley9', 9, 567891234, 9),
-    (10, 'Customer10', 'Last10', 'Provience10', 'City10', 'Street10', 'Alley10', 10, 987654321, 10),
-    (11, 'Customer11', 'Last11', 'Provience11', 'City11', 'Street11', 'Alley11', 11, 678912345, 11),
-    (12, 'Customer12', 'Last12', 'Provience12', 'City12', 'Street12', 'Alley12', 12, 543219876, 12),
-    (13, 'Customer13', 'Last13', 'Provience13', 'City13', 'Street13', 'Alley13', 13, 789123456, 13),
-    (14, 'Customer14', 'Last14', 'Provience14', 'City14', 'Street14', 'Alley14', 14, 321654987, 14),
-    (15, 'Customer15', 'Last15', 'Provience15', 'City15', 'Street15', 'Alley15', 15, 654987321, 15),
-    (16, 'Customer16', 'Last16', 'Provience16', 'City16', 'Street16', 'Alley16', 16, 234567891, 16),
-    (17, 'Customer17', 'Last17', 'Provience17', 'City17', 'Street17', 'Alley17', 17, 876543219, 17),
-    (18, 'Customer18', 'Last18', 'Provience18', 'City18', 'Street18', 'Alley18', 18, 567891234, 18),
-    (19, 'Customer19', 'Last19', 'Provience19', 'City19', 'Street19', 'Alley19', 19, 987654321, 19),
-    (20, 'Customer20', 'Last20', 'Provience20', 'City20', 'Street20', 'Alley20', 20, 678912345, 20);
-
-INSERT INTO orders (order_ID, product_ID, brand, distributer, customer_ID)
-VALUES
-    (1, 1, 'Brand1', 'Distributer1', 1),
-    (2, 2, 'Brand2', 'Distributer2', 2),
-    (3, 3, 'Brand3', 'Distributer3', 3),
-    (4, 4, 'Brand4', 'Distributer4', 4),
-    (5, 5, 'Brand5', 'Distributer5', 5),
-    (6, 6, 'Brand6', 'Distributer6', 6),
-    (7, 7, 'Brand7', 'Distributer7', 7),
-    (8, 8, 'Brand8', 'Distributer8', 8),
-    (9, 9, 'Brand9', 'Distributer1', 9),
-    (10, 10, 'Brand10', 'Distributer2', 10),
-    (11, 11, 'Brand11', 'Distributer3', 11),
-    (12, 12, 'Brand12', 'Distributer4', 12),
-    (13, 13, 'Brand13', 'Distributer5', 13),
-    (14, 14, 'Brand14', 'Distributer6', 14),
-    (15, 15, 'Brand15', 'Distributer7', 15),
-    (16, 16, 'Brand1', 'Distributer1', 16),
-    (17, 17, 'Brand2', 'Distributer2', 17);
-
--- Inserting fake data into the ptype table
-INSERT INTO ptype (tname) VALUES ('Cake'), ('Biscuit'), ('Chocolate'), ('Snack'), ('Drink');
 
 -- Inserting fake data into the brand table
-INSERT INTO brand (bname, factory_ID, btype) VALUES
-    ('BrandA', 1, 'Cake'),
-    ('BrandB', 2, 'Biscuit'),
-    ('BrandC', 3, 'Chocolate'),
-    ('BrandD', 1, 'Snack'),
-    ('BrandE', 4, 'Drink');
+INSERT INTO brand (bname, factory_ID, btype)
+VALUES
+    ('BrandA', 1, 'TypeA'),
+    ('BrandB', 2, 'TypeB'),
+    ('BrandC', 3, 'TypeC'),
+    ('BrandD', 4, 'TypeD'),
+    ('BrandE', 5, 'TypeE'),
+    ('BrandF', 6, 'TypeF'),
+    ('BrandG', 7, 'TypeG'),
+    ('BrandH', 8, 'TypeH'),
+    ('BrandI', 9, 'TypeI'),
+    ('BrandJ', 10, 'TypeJ');
+
 
 -- Inserting fake data into the brand_info table
-INSERT INTO brand_info (bname, opening_day, opening_month, opening_year) VALUES
+INSERT INTO brand_info (bname, opening_day, opening_month, opening_year)
+VALUES
     ('BrandA', 1, 1, 2010),
-    ('BrandB', 15, 6, 2005),
-    ('BrandC', 10, 3, 2018),
-    ('BrandD', 5, 9, 2008),
-    ('BrandE', 20, 7, 2013);
+    ('BrandB', 2, 2, 2011),
+    ('BrandC', 3, 3, 2012),
+    ('BrandD', 4, 4, 2013),
+    ('BrandE', 5, 5, 2014),
+    ('BrandF', 6, 6, 2015),
+    ('BrandG', 7, 7, 2016),
+    ('BrandH', 8, 8, 2017),
+    ('BrandI', 9, 9, 2018),
+    ('BrandJ', 10, 10, 2019);
 
--- Inserting fake data into the product table
-INSERT INTO product (barcode_ID, pname, weight, quantity, brand, ptype) VALUES
-    (41, 'Cake A', 0.5, 100, 'BrandA', 'Cake'),
-    (42, 'Cake B', 0.6, 80, 'BrandA', 'Cake'),
-    (43, 'Biscuit X', 0.2, 200, 'BrandB', 'Biscuit'),
-    (44, 'Biscuit Y', 0.3, 150, 'BrandB', 'Biscuit'),
-    (45, 'Chocolate P', 0.1, 50, 'BrandC', 'Chocolate'),
-    (46, 'Chocolate Q', 0.2, 70, 'BrandC', 'Chocolate'),
-    (47, 'Snack M', 0.4, 120, 'BrandD', 'Snack'),
-    (48, 'Snack N', 0.3, 90, 'BrandD', 'Snack'),
-    (49, 'Drink X', 1.0, 60, 'BrandE', 'Drink'),
-    (50, 'Drink Y', 0.5, 80, 'BrandE', 'Drink');
-
--- Inserting fake data into the factory table
-INSERT INTO factory (license, product, brand, fname, opening_day, opening_month, opening_year) VALUES
-    (16, 41, 'BrandA', 'Factory1', 1, 1, 2000),
-    (17, 42, 'BrandA', 'Factory2', 15, 6, 1998),
-    (18, 43, 'BrandB', 'Factory3', 10, 3, 2015),
-    (19, 44, 'BrandB', 'Factory4', 5, 9, 2006),
-    (20, 45, 'BrandC', 'Factory5', 3, 12, 2012),
-    (21, 46, 'BrandC', 'Factory6', 20, 4, 2019),
-    (22, 47, 'BrandD', 'Factory7', 7, 7, 2004),
-    (23, 48, 'BrandD', 'Factory8', 11, 11, 2011),
-    (24, 49, 'BrandE', 'Factory9', 25, 2, 2009),
-    (25, 50, 'BrandE', 'Factory10', 14, 9, 2016);
--- Inserting fake data into the customer table
-INSERT INTO customer (national_ID, cname, last_name, provience, city, street, alley, pelak, phone_number) VALUES
-    ('CUST001', 'John', 'Doe', 'Province1', 'City1', 'Street1', 'Alley1', 10, '1234567890'),
-    ('CUST002', 'Jane', 'Smith', 'Province2', 'City2', 'Street2', 'Alley2', 20, '9876543210'),
-    ('CUST003', 'David', 'Johnson', 'Province1', 'City1', 'Street3', 'Alley3', 30, '4561237890'),
-    ('CUST004', 'Emily', 'Davis', 'Province3', 'City3', 'Street4', 'Alley4', 40, '7894561230'),
-    ('CUST005', 'Michael', 'Wilson', 'Province2', 'City2', 'Street5', 'Alley5', 50, '3216549870'),
-    ('CUST006', 'Sarah', 'Brown', 'Province3', 'City3', 'Street6', 'Alley6', 60, '6549873210'),
-    ('CUST007', 'Robert', 'Taylor', 'Province4', 'City4', 'Street7', 'Alley7', 70, '9081726354'),
-    ('CUST008', 'Laura', 'Miller', 'Province2', 'City2', 'Street8', 'Alley8', 80, '2635418709'),
-    ('CUST009', 'Daniel', 'Wilson', 'Province5', 'City5', 'Street9', 'Alley9', 90, '4958673021'),
-    ('CUST010', 'Olivia', 'Clark', 'Province1', 'City1', 'Street10', 'Alley10', 100, '7290183654');
 
 -- Inserting fake data into the distributer_info table
-INSERT INTO distributer_info (username, email, provience, city, street, alley, pelak, work_time_start, work_time_end) VALUES
-    ('user1', 'user1@example.com', 'Province1', 'City1', 'Street1', 'Alley1', 10, '09:00', '18:00'),
-    ('user2', 'user2@example.com', 'Province2', 'City2', 'Street2', 'Alley2', 20, '08:00', '17:00'),
-    ('user3', 'user3@example.com', 'Province3', 'City3', 'Street3', 'Alley3', 30, '07:00', '16:00'),
-    ('user4', 'user4@example.com', 'Province4', 'City4', 'Street4', 'Alley4', 40, '06:00', '15:00'),
-    ('user5', 'user5@example.com', 'Province5', 'City5', 'Street5', 'Alley5', 50, '10:00', '19:00'),
-    ('user6', 'user6@example.com', 'Province1', 'City1', 'Street6', 'Alley6', 60, '09:00', '18:00'),
-    ('user7', 'user7@example.com', 'Province2', 'City2', 'Street7', 'Alley7', 70, '08:00', '17:00'),
-    ('user8', 'user8@example.com', 'Province3', 'City3', 'Street8', 'Alley8', 80, '07:00', '16:00'),
-    ('user9', 'user9@example.com', 'Province4', 'City4', 'Street9', 'Alley9', 90, '06:00', '15:00'),
-    ('user10', 'user10@example.com', 'Province5', 'City5', 'Street10', 'Alley10', 100, '10:00', '19:00');
+INSERT INTO distributer_info (username, email, provience, city, street, alley, pelak, work_time_start, work_time_end)
+VALUES
+    ('user1', 'user1@example.com', 'ProvienceA', 'CityA', 'StreetA', 'AlleyA', 1, '09:00', '17:00'),
+    ('user2', 'user2@example.com', 'ProvienceB', 'CityB', 'StreetB', 'AlleyB', 2, '09:00', '17:00'),
+    ('user3', 'user3@example.com', 'ProvienceC', 'CityC', 'StreetC', 'AlleyC', 3, '09:00', '17:00'),
+    ('user4', 'user4@example.com', 'ProvienceD', 'CityD', 'StreetD', 'AlleyD', 4, '09:00', '17:00'),
+    ('user5', 'user5@example.com', 'ProvienceE', 'CityE', 'StreetE', 'AlleyE', 5, '09:00', '17:00'),
+    ('user6', 'user6@example.com', 'ProvienceF', 'CityF', 'StreetF', 'AlleyF', 6, '09:00', '17:00'),
+    ('user7', 'user7@example.com', 'ProvienceG', 'CityG', 'StreetG', 'AlleyG', 7, '09:00', '17:00');
 
--- Inserting fake data into the distributer table
-INSERT INTO distributer (username, product_ID, brand, price) VALUES
-    ('user1', 41, 'BrandA', 10.99),
-    ('user1', 43, 'BrandB', 5.99),
-    ('user2', 42, 'BrandA', 9.99),
-    ('user2', 45, 'BrandC', 7.99),
-    ('user3', 44, 'BrandB', 4.99),
-    ('user3', 47, 'BrandD', 8.99),
-    ('user4', 46, 'BrandC', 6.99),
-    ('user4', 48, 'BrandD', 9.99),
-    ('user5', 41, 'BrandA', 10.49),
-    ('user5', 43, 'BrandB', 5.49),
-    ('user6', 42, 'BrandA', 9.49),
-    ('user6', 45, 'BrandC', 7.49),
-    ('user7', 44, 'BrandB', 4.49),
-    ('user7', 47, 'BrandD', 8.49),
-    ('user8', 46, 'BrandC', 6.49),
-    ('user8', 48, 'BrandD', 9.49),
-    ('user9', 41, 'BrandA', 10.99),
-    ('user9', 43, 'BrandB', 5.99),
-    ('user10', 42, 'BrandA', 9.99),
-    ('user10', 45, 'BrandC', 7.99);
 
--- Inserting fake data into the orders table
-INSERT INTO orders (order_ID, product_ID, brand, distributer, customer_ID) VALUES
-    ('ORDER001', 41, 'BrandA', 'user1', 'CUST001'),
-    ('ORDER002', 43, 'BrandB', 'user2', 'CUST002'),
-    ('ORDER003', 42, 'BrandA', 'user1', 'CUST003'),
-    ('ORDER004', 45, 'BrandC', 'user2', 'CUST004'),
-    ('ORDER005', 44, 'BrandB', 'user3', 'CUST005'),
-    ('ORDER006', 46, 'BrandC', 'user4', 'CUST006'),
-    ('ORDER007', 48, 'BrandD', 'user5', 'CUST007'),
-    ('ORDER008', 41, 'BrandA', 'user6', 'CUST008'),
-    ('ORDER009', 43, 'BrandB', 'user7', 'CUST009'),
-    ('ORDER010', 42, 'BrandA', 'user8', 'CUST010');
+INSERT INTO distributer (username, product_ID, brand, price)
+VALUES
+    ('user1', 19, 'BrandA', 9.99),
+    ('user1', 20, 'BrandA', 14.99),
+    ('user1', 13, 'BrandA', 11.99),
+    ('user1', 14, 'BrandA', 10.99),
+    ('user1', 15, 'BrandA', 13.99),
+    ('user1', 16, 'BrandA', 12.99),
+    ('user1', 17, 'BrandA', 8.99),
+    ('user1', 18, 'BrandA', 15.99),
+    ('user1', 19, 'BrandA', 9.99),
+    ('user1', 10, 'BrandA', 12.99),
+    ('user1', 11, 'BrandA', 11.99),
+    ('user1', 12, 'BrandA', 10.99),
+    ('user1', 13, 'BrandA', 13.99),
+    ('user1', 14, 'BrandA', 9.99),
+    ('user1', 15, 'BrandA', 14.99),
+    ('user1', 16, 'BrandA', 12.99),
+    ('user1', 17, 'BrandA', 11.99),
+    ('user1', 18, 'BrandA', 13.99),
+    ('user1', 19, 'BrandA', 10.99),
+    ('user1', 10, 'BrandA', 9.99),
+    ('user1', 11, 'BrandA', 14.99),
+    ('user1', 12, 'BrandA', 15.99),
+    ('user1', 13, 'BrandA', 11.99),
+    ('user1', 14, 'BrandA', 10.99),
+    ('user1', 15, 'BrandA', 12.99),
+    ('user1', 16, 'BrandA', 9.99),
+    ('user1', 17, 'BrandA', 13.99),
+    ('user1', 18, 'BrandA', 12.99),
+    ('user1', 19, 'BrandA', 11.99),
+    ('user1', 20, 'BrandA', 10.99);
 
--- Inserting more fake data into the orders table
-INSERT INTO orders (order_ID, product_ID, brand, distributer, customer_ID) VALUES
-    ('ORDER011', 44, 'BrandB', 'user9', 'CUST001'),
-    ('ORDER012', 47, 'BrandD', 'user10', 'CUST002'),
-    ('ORDER013', 46, 'BrandC', 'user1', 'CUST003'),
-    ('ORDER014', 48, 'BrandD', 'user2', 'CUST004'),
-    ('ORDER015', 41, 'BrandA', 'user3', 'CUST005'),
-    ('ORDER016', 43, 'BrandB', 'user4', 'CUST006'),
-    ('ORDER017', 42, 'BrandA', 'user5', 'CUST007'),
-    ('ORDER018', 45, 'BrandC', 'user6', 'CUST008'),
-    ('ORDER019', 44, 'BrandB', 'user7', 'CUST009'),
-    ('ORDER020', 47, 'BrandD', 'user8', 'CUST010');
 
--- Inserting more fake data into the orders table
-INSERT INTO orders (order_ID, product_ID, brand, distributer, customer_ID) VALUES
-    ('ORDER021', 46, 'BrandC', 'user9', 'CUST001'),
-    ('ORDER022', 48, 'BrandD', 'user10', 'CUST002'),
-    ('ORDER023', 41, 'BrandA', 'user1', 'CUST003'),
-    ('ORDER024', 43, 'BrandB', 'user2', 'CUST004'),
-    ('ORDER025', 42, 'BrandA', 'user3', 'CUST005'),
-    ('ORDER026', 45, 'BrandC', 'user4', 'CUST006'),
-    ('ORDER027', 44, 'BrandB', 'user5', 'CUST007'),
-    ('ORDER028', 47, 'BrandD', 'user6', 'CUST008'),
-    ('ORDER029', 46, 'BrandC', 'user7', 'CUST009'),
-    ('ORDER030', 48, 'BrandD', 'user8', 'CUST010');
+INSERT INTO distributer (username, product_ID, brand, price)
+VALUES
+    ('user2', 1, 'BrandC', 9.99),
+    ('user2', 2, 'BrandC', 14.99),
+    ('user2', 3, 'BrandC', 11.99),
+    ('user2', 4, 'BrandC', 10.99),
+    ('user2', 5, 'BrandC', 13.99),
+    ('user2', 6, 'BrandC', 12.99),
+    ('user2', 7, 'BrandC', 8.99),
+    ('user2', 8, 'BrandC', 15.99),
+    ('user2', 10, 'BrandC', 12.99),
+    ('user2', 9, 'BrandC', 12.99),
+    ('user2', 11, 'BrandC', 11.99),
+    ('user2', 12, 'BrandC', 10.99),
+    ('user2', 13, 'BrandC', 13.99),
+    ('user2', 14, 'BrandC', 9.99),
+    ('user2', 15, 'BrandC', 14.99),
+    ('user2', 16, 'BrandC', 12.99),
+    ('user2', 17, 'BrandC', 11.99),
+    ('user2', 18, 'BrandC', 13.99),
+    ('user2', 19, 'BrandC', 10.99),
+    ('user2', 10, 'BrandD', 9.99),
+    ('user2', 11, 'BrandD', 14.99),
+    ('user2', 12, 'BrandD', 15.99),
+    ('user2', 13, 'BrandD', 11.99),
+    ('user2', 14, 'BrandD', 10.99),
+    ('user2', 15, 'BrandD', 12.99),
+    ('user2', 16, 'BrandD', 9.99),
+    ('user2', 17, 'BrandD', 13.99),
+    ('user2', 18, 'BrandD', 12.99),
+    ('user2', 19, 'BrandD', 11.99),
+    ('user2', 20, 'BrandD', 10.99);
 
--- Inserting more fake data into the orders table
-INSERT INTO orders (order_ID, product_ID, brand, distributer, customer_ID) VALUES
-    ('ORDER031', 41, 'BrandA', 'user9', 'CUST001'),
-    ('ORDER032', 43, 'BrandB', 'user10', 'CUST002'),
-    ('ORDER033', 42, 'BrandA', 'user1', 'CUST003'),
-    ('ORDER034', 45, 'BrandC', 'user2', 'CUST004'),
-    ('ORDER035', 44, 'BrandB', 'user3', 'CUST005'),
-    ('ORDER036', 47, 'BrandD', 'user4', 'CUST006'),
-    ('ORDER037', 46, 'BrandC', 'user5', 'CUST007'),
-    ('ORDER038', 48, 'BrandD', 'user6', 'CUST008'),
-    ('ORDER039', 41, 'BrandA', 'user7', 'CUST009'),
-    ('ORDER040', 43, 'BrandB', 'user8', 'CUST010');
+
+INSERT INTO distributer (username, product_ID, brand, price)
+VALUES
+    ('user3', 1, 'BrandD', 9.99),
+    ('user3', 2, 'BrandD', 14.99),
+    ('user3', 3, 'BrandD', 11.99),
+    ('user3', 4, 'BrandD', 10.99),
+    ('user3', 5, 'BrandD', 13.99),
+    ('user3', 6, 'BrandD', 12.99),
+    ('user3', 7, 'BrandD', 8.99),
+    ('user3', 8, 'BrandD', 15.99),
+    ('user3', 10, 'BrandD', 12.99),
+    ('user3', 9, 'BrandD', 12.99),
+    ('user3', 11, 'BrandD', 11.99),
+    ('user3', 12, 'BrandD', 10.99),
+    ('user3', 13, 'BrandD', 13.99),
+    ('user3', 14, 'BrandD', 9.99),
+    ('user3', 15, 'BrandD', 14.99),
+    ('user3', 16, 'BrandD', 12.99),
+    ('user3', 17, 'BrandD', 11.99),
+    ('user3', 18, 'BrandD', 13.99),
+    ('user3', 19, 'BrandD', 10.99),
+    ('user3', 10, 'BrandE', 9.99),
+    ('user3', 11, 'BrandE', 14.99),
+    ('user3', 12, 'BrandE', 15.99),
+    ('user3', 13, 'BrandE', 11.99),
+    ('user3', 14, 'BrandE', 10.99),
+    ('user3', 15, 'BrandE', 12.99),
+    ('user3', 16, 'BrandE', 9.99),
+    ('user3', 17, 'BrandE', 13.99),
+    ('user3', 18, 'BrandE', 12.99),
+    ('user3', 19, 'BrandE', 11.99),
+    ('user3', 20, 'BrandE', 10.99);
+
+INSERT INTO distributer (username, product_ID, brand, price)
+VALUES
+    ('user4', 1, 'BrandE', 9.99),
+    ('user4', 2, 'BrandE', 14.99),
+    ('user4', 3, 'BrandE', 11.99),
+    ('user4', 4, 'BrandE', 10.99),
+    ('user4', 5, 'BrandE', 13.99),
+    ('user4', 6, 'BrandE', 12.99),
+    ('user4', 7, 'BrandE', 8.99),
+    ('user4', 8, 'BrandE', 15.99),
+    ('user4', 10, 'BrandE', 12.99),
+    ('user4', 9, 'BrandE', 12.99),
+    ('user4', 11, 'BrandE', 11.99),
+    ('user4', 12, 'BrandE', 10.99),
+    ('user4', 13, 'BrandE', 13.99),
+    ('user4', 14, 'BrandE', 9.99),
+    ('user4', 15, 'BrandE', 14.99),
+    ('user4', 16, 'BrandE', 12.99),
+    ('user4', 17, 'BrandE', 11.99),
+    ('user4', 18, 'BrandE', 13.99),
+    ('user4', 19, 'BrandE', 10.99),
+    ('user4', 10, 'BrandF', 9.99),
+    ('user4', 11, 'BrandF', 14.99),
+    ('user4', 12, 'BrandF', 15.99),
+    ('user4', 13, 'BrandF', 11.99),
+    ('user4', 14, 'BrandF', 10.99),
+    ('user4', 15, 'BrandF', 12.99),
+    ('user4', 16, 'BrandF', 9.99),
+    ('user4', 17, 'BrandF', 13.99),
+    ('user4', 18, 'BrandF', 12.99),
+    ('user4', 19, 'BrandF', 11.99),
+    ('user4', 20, 'BrandF', 10.99);
+    
+INSERT INTO distributer (username, product_ID, brand, price)
+VALUES
+    ('user5', 1, 'BrandF', 9.99),
+    ('user5', 2, 'BrandF', 14.99),
+    ('user5', 3, 'BrandF', 11.99),
+    ('user5', 4, 'BrandF', 10.99),
+    ('user5', 5, 'BrandF', 13.99),
+    ('user5', 6, 'BrandF', 12.99),
+    ('user5', 7, 'BrandF', 8.99),
+    ('user5', 8, 'BrandF', 15.99),
+    ('user5', 10, 'BrandF', 12.99),
+    ('user5', 9, 'BrandF', 12.99),
+    ('user5', 11, 'BrandF', 11.99),
+    ('user5', 12, 'BrandF', 10.99),
+    ('user5', 13, 'BrandF', 13.99),
+    ('user5', 14, 'BrandF', 9.99),
+    ('user5', 15, 'BrandF', 14.99),
+    ('user5', 16, 'BrandF', 12.99),
+    ('user5', 17, 'BrandF', 11.99),
+    ('user5', 18, 'BrandF', 13.99),
+    ('user5', 19, 'BrandF', 10.99),
+    ('user5', 10, 'BrandG', 9.99),
+    ('user5', 11, 'BrandG', 14.99),
+    ('user5', 12, 'BrandG', 15.99),
+    ('user5', 13, 'BrandG', 11.99),
+    ('user5', 14, 'BrandG', 10.99),
+    ('user5', 15, 'BrandG', 12.99),
+    ('user5', 16, 'BrandG', 9.99),
+    ('user5', 17, 'BrandG', 13.99),
+    ('user5', 18, 'BrandG', 12.99),
+    ('user5', 19, 'BrandG', 11.99),
+    ('user5', 20, 'BrandG', 10.99);
+
+INSERT INTO distributer (username, product_ID, brand, price)
+VALUES
+    ('user6', 1, 'BrandG', 9.99),
+    ('user6', 2, 'BrandG', 14.99),
+    ('user6', 3, 'BrandG', 11.99),
+    ('user6', 4, 'BrandG', 10.99),
+    ('user6', 5, 'BrandG', 13.99),
+    ('user6', 6, 'BrandG', 12.99),
+    ('user6', 7, 'BrandG', 8.99),
+    ('user6', 8, 'BrandG', 15.99),
+    ('user6', 10, 'BrandG', 12.99),
+    ('user6', 9, 'BrandG', 12.99),
+    ('user6', 11, 'BrandG', 11.99),
+    ('user6', 12, 'BrandG', 10.99),
+    ('user6', 13, 'BrandG', 13.99),
+    ('user6', 14, 'BrandG', 9.99),
+    ('user6', 15, 'BrandG', 14.99),
+    ('user6', 16, 'BrandG', 12.99),
+    ('user6', 17, 'BrandG', 11.99),
+    ('user6', 18, 'BrandG', 13.99),
+    ('user6', 19, 'BrandG', 10.99),
+    ('user6', 10, 'BrandH', 9.99),
+    ('user6', 11, 'BrandH', 14.99),
+    ('user6', 12, 'BrandH', 15.99),
+    ('user6', 13, 'BrandH', 11.99),
+    ('user6', 14, 'BrandH', 10.99),
+    ('user6', 15, 'BrandH', 12.99),
+    ('user6', 16, 'BrandH', 9.99),
+    ('user6', 17, 'BrandH', 13.99),
+    ('user6', 18, 'BrandH', 12.99),
+    ('user6', 19, 'BrandH', 11.99),
+    ('user6', 20, 'BrandH', 10.99);
+
+
+    INSERT INTO distributer (username, product_ID, brand, price)
+VALUES
+    ('user7', 1, 'BrandH', 9.99),
+    ('user7', 2, 'BrandH', 14.99),
+    ('user7', 3, 'BrandH', 11.99),
+    ('user7', 4, 'BrandH', 10.99),
+    ('user7', 5, 'BrandH', 13.99),
+    ('user7', 6, 'BrandH', 12.99),
+    ('user7', 7, 'BrandH', 8.99),
+    ('user7', 8, 'BrandH', 15.99),
+    ('user7', 10, 'BrandH', 12.99),
+    ('user7', 9 , 'BrandH', 12.99),
+    ('user7', 11, 'BrandH', 11.99),
+    ('user7', 12, 'BrandH', 10.99),
+    ('user7', 13, 'BrandH', 13.99),
+    ('user7', 14, 'BrandH', 9.99),
+    ('user7', 15, 'BrandH', 14.99),
+    ('user7', 16, 'BrandH', 12.99),
+    ('user7', 17, 'BrandH', 11.99),
+    ('user7', 18, 'BrandH', 13.99),
+    ('user7', 19, 'BrandH', 10.99),
+    ('user7', 10, 'BrandI', 9.99),
+    ('user7', 11, 'BrandI', 14.99),
+    ('user7', 12, 'BrandI', 15.99),
+    ('user7', 13, 'BrandI', 11.99),
+    ('user7', 14, 'BrandI', 10.99),
+    ('user7', 15, 'BrandI', 12.99),
+    ('user7', 16, 'BrandI', 9.99),
+    ('user7', 17, 'BrandI', 13.99),
+    ('user7', 18, 'BrandI', 12.99),
+    ('user7', 19, 'BrandI', 11.99),
+    ('user7', 20, 'BrandI', 10.99);
+
+
+    -- Inserting fake data into the customer table
+INSERT INTO customer (national_ID, cname, last_name, provience, city, street, alley, pelak, phone_number)
+VALUES
+    ('CUST001', 'John', 'Doe', 'ProvienceA', 'CityA', 'StreetA', 'AlleyA', 10, '1234567890'),
+    ('CUST002', 'Jane', 'Smith', 'ProvienceB', 'CityB', 'StreetB', 'AlleyB', 20, '2345678901'),
+    ('CUST003', 'Michael', 'Johnson', 'ProvienceC', 'CityC', 'StreetC', 'AlleyC', 30, '3456789012'),
+    ('CUST004', 'Emily', 'Brown', 'ProvienceD', 'CityD', 'StreetD', 'AlleyD', 40, '4567890123'),
+    ('CUST005', 'William', 'Jones', 'ProvienceE', 'CityA', 'StreetE', 'AlleyE', 50, '5678901234'),
+    ('CUST006', 'Olivia', 'Davis', 'ProvienceF', 'CityB', 'StreetF', 'AlleyF', 60, '6789012345'),
+    ('CUST007', 'James', 'Miller', 'ProvienceG', 'CityC', 'StreetG', 'AlleyG', 70, '7890123456'),
+    ('CUST008', 'Sophia', 'Wilson', 'ProvienceH', 'CityD', 'StreetH', 'AlleyH', 80, '8901234567'),
+    ('CUST009', 'Benjamin', 'Taylor', 'ProvienceI', 'CityB', 'StreetI', 'AlleyI', 90, '9012345678'),
+    ('CUST010', 'Emma', 'Anderson', 'ProvienceJ', 'CityB', 'StreetJ', 'AlleyJ', 100, '0123456789'),
+    ('CUST011', 'Liam', 'Clark', 'ProvienceA', 'CityA', 'StreetA', 'AlleyA', 110, '1234567890'),
+    ('CUST012', 'Ava', 'Harris', 'ProvienceB', 'CityB', 'StreetB', 'AlleyB', 120, '2345678901'),
+    ('CUST013', 'Noah', 'Young', 'ProvienceC', 'CityC', 'StreetC', 'AlleyC', 130, '3456789012'),
+    ('CUST014', 'Isabella', 'Hall', 'ProvienceD', 'CityD', 'StreetD', 'AlleyD', 140, '4567890123'),
+    ('CUST015', 'Logan', 'Walker', 'ProvienceE', 'CityA', 'StreetE', 'AlleyE', 150, '5678901234'),
+    ('CUST016', 'Mia', 'Lewis', 'ProvienceF', 'CityB', 'StreetF', 'AlleyF', 160, '6789012345'),
+    ('CUST017', 'Lucas', 'Robinson', 'ProvienceG', 'CityC', 'StreetG', 'AlleyG', 170, '7890123456'),
+    ('CUST018', 'Harper', 'Kelly', 'ProvienceH', 'CityS', 'StreetH', 'AlleyH', 180, '8901234567'),
+    ('CUST019', 'Jackson', 'Baker', 'ProvienceI', 'CityB', 'StreetI', 'AlleyI', 190, '9012345678'),
+    ('CUST020', 'Abigail', 'Carter', 'ProvienceJ', 'CityB', 'StreetJ', 'AlleyJ', 200, '0123456789');
+
+INSERT INTO orders (order_ID, customer_ID)
+VALUES
+    ('ORDER001', 'CUST001'),
+    ('ORDER002', 'CUST002'),
+    ('ORDER003', 'CUST003'),
+    ('ORDER004', 'CUST004'),
+    ('ORDER005', 'CUST005'),
+    ('ORDER006', 'CUST006'),
+    ('ORDER007', 'CUST007'),
+    ('ORDER008', 'CUST008'),
+    ('ORDER009', 'CUST009'),
+    ('ORDER010', 'CUST010'),
+    ('ORDER011', 'CUST011'),
+    ('ORDER012', 'CUST012'),
+    ('ORDER013', 'CUST013'),
+    ('ORDER014', 'CUST014'),
+    ('ORDER015', 'CUST015'),
+    ('ORDER016', 'CUST016'),
+    ('ORDER017', 'CUST017'),
+    ('ORDER018', 'CUST018'),
+    ('ORDER019', 'CUST019'),
+    ('ORDER020', 'CUST020');
+
+INSERT INTO orders (order_ID, customer_ID)
+VALUES
+    ('ORDER021', 'CUST001'),
+    ('ORDER022', 'CUST002'),
+    ('ORDER023', 'CUST003'),
+    ('ORDER024', 'CUST004'),
+    ('ORDER025', 'CUST005'),
+    ('ORDER026', 'CUST006'),
+    ('ORDER027', 'CUST007'),
+    ('ORDER028', 'CUST008'),
+    ('ORDER029', 'CUST009'),
+    ('ORDER030', 'CUST010'),
+    ('ORDER031', 'CUST011'),
+    ('ORDER032', 'CUST012'),
+    ('ORDER033', 'CUST013'),
+    ('ORDER034', 'CUST014'),
+    ('ORDER035', 'CUST015'),
+    ('ORDER036', 'CUST016'),
+    ('ORDER037', 'CUST017'),
+    ('ORDER038', 'CUST018'),
+    ('ORDER039', 'CUST019'),
+    ('ORDER040', 'CUST020');
+
+
+INSERT INTO orders (order_ID, customer_ID)
+VALUES
+    ('ORDER041', 'CUST001'),
+    ('ORDER042', 'CUST002'),
+    ('ORDER043', 'CUST003'),
+    ('ORDER044', 'CUST004'),
+    ('ORDER045', 'CUST005'),
+    ('ORDER046', 'CUST006'),
+    ('ORDER047', 'CUST007'),
+    ('ORDER048', 'CUST008'),
+    ('ORDER049', 'CUST009'),
+    ('ORDER050', 'CUST010'),
+    ('ORDER051', 'CUST011'),
+    ('ORDER052', 'CUST012'),
+    ('ORDER053', 'CUST013'),
+    ('ORDER054', 'CUST014'),
+    ('ORDER055', 'CUST015'),
+    ('ORDER056', 'CUST016'),
+    ('ORDER057', 'CUST017'),
+    ('ORDER058', 'CUST018'),
+    ('ORDER059', 'CUST019'),
+    ('ORDER60', 'CUST020');
+	
+INSERT INTO orders (order_ID, customer_ID)
+VALUES
+    ('ORDER061', 'CUST001'),
+    ('ORDER062', 'CUST002'),
+    ('ORDER063', 'CUST003'),
+    ('ORDER064', 'CUST004'),
+    ('ORDER065', 'CUST005'),
+    ('ORDER066', 'CUST006'),
+    ('ORDER067', 'CUST007'),
+    ('ORDER068', 'CUST008'),
+    ('ORDER069', 'CUST009'),
+    ('ORDER070', 'CUST010'),
+    ('ORDER071', 'CUST011'),
+    ('ORDER072', 'CUST012'),
+    ('ORDER073', 'CUST013'),
+    ('ORDER074', 'CUST014'),
+    ('ORDER075', 'CUST015'),
+    ('ORDER076', 'CUST016'),
+    ('ORDER077', 'CUST017'),
+    ('ORDER078', 'CUST018'),
+    ('ORDER079', 'CUST019'),
+    ('ORDER080', 'CUST020');
+
+INSERT INTO orders (order_ID, customer_ID)
+VALUES
+    ('ORDER081', 'CUST001'),
+    ('ORDER082', 'CUST002'),
+    ('ORDER083', 'CUST003'),
+    ('ORDER084', 'CUST004'),
+    ('ORDER085', 'CUST005'),
+    ('ORDER086', 'CUST006'),
+    ('ORDER087', 'CUST007'),
+    ('ORDER088', 'CUST008'),
+    ('ORDER089', 'CUST009'),
+    ('ORDER090', 'CUST010'),
+    ('ORDER091', 'CUST011'),
+    ('ORDER092', 'CUST012'),
+    ('ORDER093', 'CUST013'),
+    ('ORDER094', 'CUST014'),
+    ('ORDER095', 'CUST015'),
+    ('ORDER096', 'CUST016'),
+    ('ORDER097', 'CUST017'),
+    ('ORDER098', 'CUST018'),
+    ('ORDER099', 'CUST019'),
+    ('ORDER100', 'CUST020');
+	
+
+INSERT INTO orders (order_ID, customer_ID)
+VALUES
+    ('ORDER101', 'CUST001'),
+    ('ORDER102', 'CUST002'),
+    ('ORDER103', 'CUST003'),
+    ('ORDER104', 'CUST004'),
+    ('ORDER105', 'CUST005'),
+    ('ORDER106', 'CUST006'),
+    ('ORDER107', 'CUST007'),
+    ('ORDER108', 'CUST008'),
+    ('ORDER109', 'CUST009'),
+    ('ORDER110', 'CUST010'),
+    ('ORDER111', 'CUST011'),
+    ('ORDER112', 'CUST012'),
+    ('ORDER113', 'CUST013'),
+    ('ORDER114', 'CUST014'),
+    ('ORDER115', 'CUST015'),
+    ('ORDER116', 'CUST016'),
+    ('ORDER117', 'CUST017'),
+    ('ORDER118', 'CUST018'),
+    ('ORDER119', 'CUST019'),
+    ('ORDER120', 'CUST020');
+
+INSERT INTO orders (order_ID, customer_ID)
+VALUES
+    ('ORDER121', 'CUST001'),
+    ('ORDER122', 'CUST002'),
+    ('ORDER123', 'CUST003'),
+    ('ORDER124', 'CUST004'),
+    ('ORDER125', 'CUST005'),
+    ('ORDER126', 'CUST006'),
+    ('ORDER127', 'CUST007'),
+    ('ORDER128', 'CUST008'),
+    ('ORDER129', 'CUST009'),
+    ('ORDER130', 'CUST010'),
+    ('ORDER131', 'CUST011'),
+    ('ORDER132', 'CUST012'),
+    ('ORDER133', 'CUST013'),
+    ('ORDER134', 'CUST014'),
+    ('ORDER135', 'CUST015'),
+    ('ORDER136', 'CUST016'),
+    ('ORDER137', 'CUST017'),
+    ('ORDER138', 'CUST018'),
+    ('ORDER139', 'CUST019'),
+    ('ORDER140', 'CUST020');
+
+
+INSERT INTO orders (order_ID, customer_ID)
+VALUES
+    ('ORDER141', 'CUST001'),
+    ('ORDER142', 'CUST002'),
+    ('ORDER143', 'CUST003'),
+    ('ORDER144', 'CUST004'),
+    ('ORDER145', 'CUST005'),
+    ('ORDER146', 'CUST006'),
+    ('ORDER147', 'CUST007'),
+    ('ORDER148', 'CUST008'),
+    ('ORDER149', 'CUST009'),
+    ('ORDER150', 'CUST010'),
+    ('ORDER151', 'CUST011'),
+    ('ORDER152', 'CUST012'),
+    ('ORDER153', 'CUST013'),
+    ('ORDER154', 'CUST014'),
+    ('ORDER155', 'CUST015'),
+    ('ORDER156', 'CUST016'),
+    ('ORDER157', 'CUST017'),
+    ('ORDER158', 'CUST018'),
+    ('ORDER159', 'CUST019'),
+    ('ORDER160', 'CUST020');
+	
+INSERT INTO orders (order_ID, customer_ID)
+VALUES
+    ('ORDER181', 'CUST001'),
+    ('ORDER182', 'CUST002'),
+    ('ORDER183', 'CUST003'),
+    ('ORDER184', 'CUST004'),
+    ('ORDER185', 'CUST005'),
+    ('ORDER186', 'CUST006'),
+    ('ORDER187', 'CUST007'),
+    ('ORDER188', 'CUST008'),
+    ('ORDER189', 'CUST009'),
+    ('ORDER190', 'CUST010'),
+    ('ORDER191', 'CUST011'),
+    ('ORDER192', 'CUST012'),
+    ('ORDER193', 'CUST013'),
+    ('ORDER194', 'CUST014'),
+    ('ORDER195', 'CUST015'),
+    ('ORDER196', 'CUST016'),
+    ('ORDER197', 'CUST017'),
+    ('ORDER198', 'CUST018'),
+    ('ORDER199', 'CUST019'),
+    ('ORDER200', 'CUST020');
+	
+
+-- Inserting fake data into the order_details table for distributor 'user1'
+INSERT INTO order_details (order_ID, product_ID, brand, distributer)
+VALUES
+    ('ORDER032', 4, 'BrandC', 'user2'),
+    ('ORDER020', 5, 'BrandC', 'user2'),
+    ('ORDER022', 6, 'BrandC', 'user2'),
+    ('ORDER023', 7, 'BrandC', 'user2'),
+    ('ORDER023', 8, 'BrandC', 'user2'),
+    ('ORDER024', 9, 'BrandC', 'user2'),
+    ('ORDER024', 10, 'BrandC', 'user2'),
+    ('ORDER024', 11, 'BrandC', 'user2'),
+    ('ORDER024', 12, 'BrandC', 'user2'),
+    ('ORDER024', 13, 'BrandC', 'user2'),
+    ('ORDER024', 14, 'BrandC', 'user2'),
+    ('ORDER054', 15, 'BrandC', 'user2');
+
+
+INSERT INTO order_details (order_ID, product_ID, brand, distributer)
+VALUES
+    ('ORDER095', 1, 'BrandD', 'user3'),
+    ('ORDER092', 2, 'BrandD', 'user3'),
+    ('ORDER093', 3, 'BrandD', 'user3'),
+    ('ORDER094', 4, 'BrandD', 'user3'),
+    ('ORDER095', 5, 'BrandD', 'user3'),
+    ('ORDER095', 6, 'BrandD', 'user3'),
+    ('ORDER095', 7, 'BrandD', 'user3'),
+    ('ORDER096', 8, 'BrandD', 'user3'),
+    ('ORDER097', 9, 'BrandD', 'user3'),
+    ('ORDER099', 11, 'BrandD', 'user3'),
+    ('ORDER099', 12, 'BrandD', 'user3'),
+    ('ORDER093', 13, 'BrandD', 'user3'),
+    ('ORDER094', 14, 'BrandD', 'user3'),
+    ('ORDER095', 15, 'BrandD', 'user3');
+	
+	
+
+INSERT INTO order_details (order_ID, product_ID, brand, distributer)
+VALUES
+    ('ORDER195', 1, 'BrandD', 'user3'),
+    ('ORDER192', 2, 'BrandD', 'user3'),
+    ('ORDER193', 3, 'BrandD', 'user3'),
+    ('ORDER194', 4, 'BrandD', 'user3'),
+    ('ORDER195', 5, 'BrandD', 'user3'),
+    ('ORDER195', 6, 'BrandD', 'user3'),
+    ('ORDER195', 7, 'BrandD', 'user3'),
+    ('ORDER196', 8, 'BrandD', 'user3'),
+    ('ORDER197', 9, 'BrandD', 'user3'),
+    ('ORDER199', 11, 'BrandD', 'user3'),
+    ('ORDER199', 12, 'BrandD', 'user3'),
+    ('ORDER193', 13, 'BrandD', 'user3'),
+    ('ORDER194', 14, 'BrandD', 'user3'),
+    ('ORDER195', 15, 'BrandD', 'user3');
+	
+	
+
+INSERT INTO order_details (order_ID, product_ID, brand, distributer)
+VALUES
+    ('ORDER095', 1, 'BrandD', 'user3'),
+    ('ORDER092', 2, 'BrandD', 'user3'),
+    ('ORDER093', 3, 'BrandD', 'user3'),
+    ('ORDER094', 4, 'BrandD', 'user3'),
+    ('ORDER095', 5, 'BrandD', 'user3'),
+    ('ORDER095', 6, 'BrandD', 'user3'),
+    ('ORDER095', 7, 'BrandD', 'user3'),
+    ('ORDER096', 8, 'BrandD', 'user3'),
+    ('ORDER097', 9, 'BrandD', 'user3'),
+    ('ORDER099', 11, 'BrandD', 'user3'),
+    ('ORDER099', 12, 'BrandD', 'user3'),
+    ('ORDER093', 13, 'BrandD', 'user3'),
+    ('ORDER094', 14, 'BrandD', 'user3'),
+    ('ORDER095', 15, 'BrandD', 'user3');
+	
+	
+
+INSERT INTO order_details (order_ID, product_ID, brand, distributer)
+VALUES
+    ('ORDER095', 1, 'BrandD', 'user3'),
+    ('ORDER092', 2, 'BrandD', 'user3'),
+    ('ORDER093', 3, 'BrandD', 'user3'),
+    ('ORDER094', 4, 'BrandD', 'user3'),
+    ('ORDER095', 5, 'BrandD', 'user3'),
+    ('ORDER095', 6, 'BrandD', 'user3'),
+    ('ORDER095', 7, 'BrandD', 'user3'),
+    ('ORDER096', 8, 'BrandD', 'user3'),
+    ('ORDER097', 9, 'BrandD', 'user3'),
+    ('ORDER099', 11, 'BrandD', 'user3'),
+    ('ORDER099', 12, 'BrandD', 'user3'),
+    ('ORDER093', 13, 'BrandD', 'user3'),
+    ('ORDER094', 14, 'BrandD', 'user3'),
+    ('ORDER095', 15, 'BrandD', 'user3');
+	
+	
+
+INSERT INTO order_details (order_ID, product_ID, brand, distributer)
+VALUES
+    ('ORDER095', 1, 'BrandD', 'user3'),
+    ('ORDER092', 2, 'BrandD', 'user3'),
+    ('ORDER093', 3, 'BrandD', 'user3'),
+    ('ORDER094', 4, 'BrandD', 'user3'),
+    ('ORDER095', 5, 'BrandD', 'user3'),
+    ('ORDER095', 6, 'BrandD', 'user3'),
+    ('ORDER095', 7, 'BrandD', 'user3'),
+    ('ORDER096', 8, 'BrandD', 'user3'),
+    ('ORDER097', 9, 'BrandD', 'user3'),
+    ('ORDER099', 11, 'BrandD', 'user3'),
+    ('ORDER099', 12, 'BrandD', 'user3'),
+    ('ORDER093', 13, 'BrandD', 'user3'),
+    ('ORDER094', 14, 'BrandD', 'user3'),
+    ('ORDER095', 15, 'BrandD', 'user3');
+	
+	
+
+INSERT INTO order_details (order_ID, product_ID, brand, distributer)
+VALUES
+    ('ORDER095', 1, 'BrandD', 'user3'),
+    ('ORDER092', 2, 'BrandD', 'user3'),
+    ('ORDER093', 3, 'BrandD', 'user3'),
+    ('ORDER094', 4, 'BrandD', 'user3'),
+    ('ORDER095', 5, 'BrandD', 'user3'),
+    ('ORDER095', 6, 'BrandD', 'user3'),
+    ('ORDER095', 7, 'BrandD', 'user3'),
+    ('ORDER096', 8, 'BrandD', 'user3'),
+    ('ORDER097', 9, 'BrandD', 'user3'),
+    ('ORDER099', 11, 'BrandD', 'user3'),
+    ('ORDER099', 12, 'BrandD', 'user3'),
+    ('ORDER093', 13, 'BrandD', 'user3'),
+    ('ORDER094', 14, 'BrandD', 'user3'),
+    ('ORDER095', 15, 'BrandD', 'user3');
+	
+	
+
+INSERT INTO order_details (order_ID, product_ID, brand, distributer)
+VALUES
+    ('ORDER095', 1, 'BrandD', 'user3'),
+    ('ORDER092', 2, 'BrandD', 'user3'),
+    ('ORDER093', 3, 'BrandD', 'user3'),
+    ('ORDER094', 4, 'BrandD', 'user3'),
+    ('ORDER095', 5, 'BrandD', 'user3'),
+    ('ORDER095', 6, 'BrandD', 'user3'),
+    ('ORDER095', 7, 'BrandD', 'user3'),
+    ('ORDER096', 8, 'BrandD', 'user3'),
+    ('ORDER097', 9, 'BrandD', 'user3'),
+    ('ORDER099', 11, 'BrandD', 'user3'),
+    ('ORDER099', 12, 'BrandD', 'user3'),
+    ('ORDER093', 13, 'BrandD', 'user3'),
+    ('ORDER094', 14, 'BrandD', 'user3'),
+    ('ORDER095', 15, 'BrandD', 'user3');
+	
+	
+INSERT INTO order_details (order_ID, product_ID, brand, distributer)
+VALUES
+    ('ORDER041', 1, 'BrandD', 'user1'),
+    ('ORDER042', 2, 'BrandD', 'user2'),
+    ('ORDER043', 3, 'BrandA', 'user3'),
+    ('ORDER044', 4, 'BrandA', 'user4'),
+    ('ORDER045', 5, 'BrandD', 'user5'),
+    ('ORDER046', 6, 'BrandA', 'user1'),
+    ('ORDER047', 7, 'BrandA', 'user2'),
+    ('ORDER048', 8, 'BrandD', 'user3'),
+    ('ORDER049', 9, 'BrandD', 'user4'),
+    ('ORDER050', 10, 'BrandA', 'user5'),
+    ('ORDER051', 1, 'BrandA', 'user1'),
+    ('ORDER052', 2, 'BrandA', 'user2'),
+    ('ORDER053', 3, 'BrandD', 'user3'),
+    ('ORDER054', 4, 'BrandD', 'user4'),
+    ('ORDER055', 5, 'BrandA', 'user5'),
+    ('ORDER056', 6, 'BrandD', 'user1'),
+    ('ORDER057', 7, 'BrandD', 'user2'),
+    ('ORDER058', 8, 'BrandA', 'user3'),
+    ('ORDER059', 9, 'BrandA', 'user4'),
+    ('ORDER060', 10, 'BrandD', 'user5');
+
+
+INSERT INTO order_details (order_ID, product_ID, brand, distributer)
+VALUES
+    ('ORDER071', 2, 'BrandA', 'user7'),
+    ('ORDER072', 2, 'BrandA', 'user6'),
+	('ORDER073', 2, 'BrandA', 'user7'),
+    ('ORDER074', 2, 'BrandA', 'user6'),
+	('ORDER075', 2, 'BrandA', 'user7'),
+    ('ORDER076', 2, 'BrandA', 'user6'),
+	('ORDER077', 2, 'BrandA', 'user7'),
+    ('ORDER078', 2, 'BrandA', 'user6'),
+	('ORDER079', 2, 'BrandA', 'user7'),
+    ('ORDER080', 2, 'BrandA', 'user6'),
+	('ORDER081', 2, 'BrandA', 'user7'),
+    ('ORDER082', 2, 'BrandA', 'user6'),
+	('ORDER083', 2, 'BrandA', 'user7'),
+    ('ORDER084', 2, 'BrandA', 'user6'),
+	('ORDER085', 2, 'BrandA', 'user7'),
+    ('ORDER086', 2, 'BrandA', 'user6'),
+	('ORDER087', 2, 'BrandA', 'user7'),
+    ('ORDER088', 2, 'BrandA', 'user6');
