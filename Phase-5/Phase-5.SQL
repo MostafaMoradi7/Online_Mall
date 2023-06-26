@@ -58,7 +58,7 @@ JOIN order_details AS od ON d.username = od.distributer
 JOIN product AS p ON p.barcode_ID = d.product_ID
 WHERE p.pname = 'ProductG' AND d.brand = 'BrandD'
 GROUP BY d.username
-HAVING COUNT(*) < (
+HAVING COUNT(*) > (
   SELECT COUNT(*)
   FROM distributer d
   JOIN order_details od ON d.username = od.distributer
