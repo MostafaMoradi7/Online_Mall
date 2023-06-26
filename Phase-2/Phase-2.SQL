@@ -9,26 +9,12 @@ CREATE TABLE product (
 
 CREATE TABLE factory (
 	license INT PRIMARY KEY,
-	product INT,
+	product INT UNIQUE,
 	brand VARCHAR(100),
 	fname VARCHAR(100),
 	opening_day INT,
 	opening_month INT,
 	opening_year INT
-);
-
-CREATE TABLE orders (
-    order_ID VARCHAR(50) PRIMARY KEY,
-    customer_ID VARCHAR(50),
-    CONSTRAINT fk_orders_customer FOREIGN KEY (customer_ID) REFERENCES customer (national_ID)
-);
-
-CREATE TABLE order_details (
-    order_ID VARCHAR(50),
-    product_ID INT,
-    brand VARCHAR(100),
-    distributer VARCHAR(100),
-    PRIMARY KEY (order_ID, product_ID, brand)
 );
 
 CREATE TABLE customer(
@@ -40,7 +26,13 @@ CREATE TABLE customer(
 	street VARCHAR(100),
 	alley VARCHAR(100),
 	pelak INT,
-	phone_number VARCHAR(50),
+	phone_number VARCHAR(50)
+);
+
+CREATE TABLE orders (
+    order_ID VARCHAR(50) PRIMARY KEY,
+    customer_ID VARCHAR(50),
+    CONSTRAINT fk_orders_customer FOREIGN KEY (customer_ID) REFERENCES customer (national_ID)
 );
 
 CREATE TABLE distributer(
@@ -51,6 +43,15 @@ CREATE TABLE distributer(
 	amount_remaining INT,
 	PRIMARY KEY (username, brand, product_ID)
 );
+
+CREATE TABLE order_details (
+    order_ID VARCHAR(50),
+    product_ID INT,
+    brand VARCHAR(100),
+    distributer VARCHAR(100),
+    PRIMARY KEY (order_ID, product_ID, brand)
+);
+
 
 CREATE TABLE distributer_info(
 	username VARCHAR(100) PRIMARY KEY,
@@ -81,11 +82,8 @@ CREATE TABLE brand_info(
 );
 
 ALTER TABLE product
-	ADD CONSTRAINT fk_ptype_tname FOREIGN KEY (ptype) REFERENCES ptype (tname);
-
-ALTER TABLE factory
-	ADD CONSTRAINT fk_product_barcode FOREIGN KEY (product) REFERENCES product (barcode_ID),
-	
+	ADD CONSTRAINT fk_ptype_tname FOREIGN KEY (ptype) REFERENCES ptype (tname),
+	ADD CONSTRAINT fk_barcode_fproduct FOREIGN KEY (barcode_ID) REFERENCES factory (product);	
 
 ALTER TABLE distributer
 	ADD CONSTRAINT fk_pid_barcode FOREIGN KEY (product_ID) REFERENCES product (barcode_ID),
