@@ -1025,3 +1025,50 @@ VALUES
     ('ORDER086', 2, 'BrandA', 'user6'),
 	('ORDER087', 2, 'BrandA', 'user7'),
     ('ORDER088', 2, 'BrandA', 'user6');
+
+
+INSERT INTO order_details (order_ID, product_ID, brand, distributer)
+VALUES
+    ('ORDER151', 1, 'BrandD', 'user2'),
+    ('ORDER152', 2, 'BrandD', 'user2'),
+    ('ORDER153', 3, 'BrandA', 'user3'),
+    ('ORDER154', 4, 'BrandA', 'user4'),
+    ('ORDER155', 5, 'BrandD', 'user5'),
+    ('ORDER156', 6, 'BrandA', 'user1'),
+    ('ORDER157', 7, 'BrandA', 'user2'),
+    ('ORDER158', 8, 'BrandD', 'user3'),
+    ('ORDER159', 9, 'BrandD', 'user4'),
+    ('ORDER150', 10, 'BrandA', 'user5'),
+    ('ORDER151', 1, 'BrandA', 'user1'),
+    ('ORDER152', 2, 'BrandA', 'user2'),
+    ('ORDER153', 3, 'BrandD', 'user3'),
+    ('ORDER154', 4, 'BrandD', 'user4'),
+    ('ORDER155', 5, 'BrandA', 'user5'),
+    ('ORDER156', 6, 'BrandD', 'user1'),
+    ('ORDER157', 7, 'BrandD', 'user2'),
+    ('ORDER158', 8, 'BrandA', 'user3'),
+    ('ORDER159', 9, 'BrandA', 'user4'),
+    ('ORDER150', 10, 'BrandD', 'user5');
+
+
+
+INSERT INTO order_details (order_ID, product_ID, brand, distributer)
+VALUES
+    ('ORDER121', 2, 'BrandA', 'user7'),
+    ('ORDER122', 2, 'BrandA', 'user6'),
+	('ORDER123', 2, 'BrandA', 'user7'),
+    ('ORDER124', 2, 'BrandA', 'user6'),
+	('ORDER125', 2, 'BrandA', 'user7'),
+    ('ORDER126', 2, 'BrandA', 'user6'),
+	('ORDER127', 2, 'BrandA', 'user7'),
+    ('ORDER128', 2, 'BrandA', 'user6'),
+	('ORDER129', 2, 'BrandA', 'user7'),
+    ('ORDER120', 2, 'BrandA', 'user6'),
+	('ORDER131', 2, 'BrandA', 'user7'),
+    ('ORDER132', 2, 'BrandA', 'user6'),
+	('ORDER133', 2, 'BrandA', 'user7'),
+    ('ORDER134', 2, 'BrandA', 'user6'),
+	('ORDER135', 2, 'BrandA', 'user7'),
+    ('ORDER136', 2, 'BrandA', 'user6'),
+	('ORDER137', 2, 'BrandA', 'user7'),
+    ('ORDER138', 2, 'BrandA', 'user6');
